@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-
+import './Login.css';
 
 class LoginFacebook extends Component {
     constructor(){
@@ -34,16 +34,18 @@ handleFacebooklogout=()=>{
 autentification =()=>{
     if(this.state.user){
         return(
-            <div>
-            <img src={this.state.user.photoURL} alt={this.state.user.displayName} />
+            <div className="button-close">
             <button onClick={this.handleFacebooklogout}>Salir</button>
             </div>
         )
     }else{
         return( 
-        <div>
-        <button onClick={this.handleFacebooklogin}>Facebook</button>
-        </div>
+            <div className="button-face">
+                <div className="image">
+                    <img src="./components/Assets/bicicleta.jpg" alt=""/>
+                </div>
+            <button type="button" class="btn btn-primary btn-md" onClick={this.handleFacebooklogin}>Facebook</button>
+            </div>
         )
     }
 

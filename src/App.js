@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
-// import firebase from 'firebase';
+// import Firebase from './credentials';
 // import FileUpload from './fileUpload';
-import LoginGoogle from './components/LoginGoogle';
+// import LoginGoogle from './components/LoginGoogle';
 import Autentification from './components/Autentification'
-import LoginFacebook from './components/LoginFace'
+// import LoginFacebook from './components/LoginFace'
 import './App.css';
 
+
+
+
 class App extends Component {
-  render() {
+  render(){
     return(
       <div className="App">
         <div className="App-header">
+        <h2>Únete a nuestra comunidad de Mujeres Bikers en la Ciudad de México</h2>
         </div>
-        <div className = " form-group "> 
-        <Autentification />
-        <LoginGoogle />
-        <LoginFacebook />
+        <div className="App-body">
+          <div className="form-group">
+          {/* <h2>Únete a nuestra comunidad de Mujeres Bikers en la Ciudad de México</h2> */}
+          <Autentification />
+          </div>
+        </div>
+        <div className="App-footer">
+        <p class="mt-5 mb-3 text-muted">© sororiGirls</p>
+        </div>
+        <div className="App-lateral">
 
-            </div>
         </div>
+
+      </div>
     )
   }
 }

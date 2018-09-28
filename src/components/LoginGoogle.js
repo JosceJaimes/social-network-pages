@@ -33,12 +33,14 @@ class LoginGoogle extends Component {
             return( 
         <div>
                 <img src={this.state.user.photoURL} alt={this.state.user.displayName} />
-                <button onClick={this.handleGoogleLogout}>Salir</button>
         </div>
             )
         }else{
             return( 
-            <button onClick={this.handleGoogleAuth}>Google</button>
+                <div className="button-google">
+                <button type="button" class="btn btn-danger btn-md" onClick={this.handleGoogleAuth}>Google</button>
+                </div>
+            
             )
         }
     }

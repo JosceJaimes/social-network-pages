@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import firebase from 'firebase'; 
+import firebase from 'firebase';
+import LoginFacebook from './LoginFace'
+import LoginGoogle from './LoginGoogle';
 
 class Autentification extends Component {
     constructor(){
@@ -55,10 +57,11 @@ class Autentification extends Component {
                           onChange={ this.register }
                           />
                     </div>
-                    <div className="butons">
-                        <button onClick={this.register}>Registrarse</button>
-
+                    <div>
+                        <button  className="btn btn-success"onClick={this.register}>Registrarse</button>
                     </div>
+                    <LoginGoogle />
+                    <LoginFacebook />
                 </div>
 
             </div>

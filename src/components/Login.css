@@ -1,0 +1,51 @@
+
+.App-header{
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.App-body{
+    
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    padding-top: 60px;
+}
+.App-footer{
+    margin-top: 0px;
+    color: azure;
+    font-size: 20px;
+
+    
+}
+input{
+    font-size: 20%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.form-group{ 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: auto; */
+}
+.button-google{
+border-radius: 10px;
+}
+.button-face{
+border-radius: 50px;
+}
+h2{
+    font-size: 30px;
+}
+.image{
+    height: 50px;
+    width: 100px;
+  }
+.text-muted{
+    color: white;
+}
