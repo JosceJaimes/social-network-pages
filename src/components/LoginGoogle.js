@@ -15,6 +15,7 @@ class LoginGoogle extends Component {
             });
             // console.log(user)
         })
+        // this.app = firebase.initializeApp(Credentials);
     }
     handleGoogleAuth = () =>{
         const provider = new firebase.auth.GoogleAuthProvider();

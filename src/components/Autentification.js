@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase'
+import { config } from '../credentials';
+import 'firebase/auth'
+// import { Redirect } from 'react-router-dom'
 import LoginFacebook from './LoginFace'
 import LoginGoogle from './LoginGoogle';
+// import { app } from './Autentification';
 
 class Autentification extends Component {
     constructor(){
@@ -11,10 +15,11 @@ class Autentification extends Component {
             'email':'', 
             'password':''
          };
+
     }
     login=()=>{
         const auth = firebase.auth();
-        firebase.auth().createUserWithEmailAndPassword(auth)
+        config.auth().createUserWithEmailAndPassword(auth)
         .then(rest => console.log(`${rest}`))
         .catch(error => console.log(error))
     }

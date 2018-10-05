@@ -1,0 +1,12 @@
+.postForm input[type="text"]{
+    padding: 40px;
+}
+.postForm button{
+    padding: 10px;
+    color: #fff;
+    background: #604760;
+    border: none
+}
+.postForm button:hover {
+    background-color: #e4bee5;
+}

@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
-// import Firebase from './credentials';
-// import FileUpload from './fileUpload';
-// import LoginGoogle from './components/LoginGoogle';
 import Autentification from './components/Autentification'
-// import LoginFacebook from './components/LoginFace'
 import './App.css';
-
-
-
 
 class App extends Component {
   render(){
     return(
       <div className="App">
         <div className="App-header">
-        <h2>Únete a nuestra comunidad de Mujeres Bikers en la Ciudad de México</h2>
+        <img src="https://github.com/JosceJaimes/social-network-pages/blob/master/src/components/Assets/bicicleta.jpg" alt=""/>
         </div>
         <div className="App-body">
           <div className="form-group">
-          {/* <h2>Únete a nuestra comunidad de Mujeres Bikers en la Ciudad de México</h2> */}
+          <h2>Únete a nuestra comunidad de Mujeres Bikers en la Ciudad de México</h2>
           <Autentification />
           </div>
         </div>

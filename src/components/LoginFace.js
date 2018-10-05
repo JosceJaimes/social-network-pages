@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase'
+import { config } from '../credentials'
 import './Login.css';
 
 class LoginFacebook extends Component {
@@ -10,28 +11,27 @@ class LoginFacebook extends Component {
         }
     }
     componentWillMount(){
-        firebase.auth().onAuthStateChanged(user =>{
+        config.auth().onAuthStateChanged(user =>{
             this.setState({
-                user:user
-            })
+                user})
         })
     }
-handleFacebooklogin =()=>{
+handleFacebooklogin =(user)=>{
     const provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithPopup(provider)
+    config.auth().signInWithPopup(provider)
     .then(result => console.log(`${result.user.email} Ya se encuentra iniciada la sesión`))
     .catch(error => console.log(error))
 
 }
 handleFacebooklogout=()=>{
-    firebase.auth().signOut()
+    config.auth().signOut()
     .then(result => console.log(`${result.user} su sesion ha finalizado`))
     .catch(error => console.log(error))
 
 }
 
 
-autentification =()=>{
+autentification =(user)=>{
     if(this.state.user){
         return(
             <div className="button-close">
@@ -41,9 +41,6 @@ autentification =()=>{
     }else{
         return( 
             <div className="button-face">
-                <div className="image">
-                    <img src="./components/Assets/bicicleta.jpg" alt=""/>
-                </div>
             <button type="button" class="btn btn-primary btn-md" onClick={this.handleFacebooklogin}>Facebook</button>
             </div>
         )
