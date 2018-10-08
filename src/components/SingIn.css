@@ -1,0 +1,8 @@
+.bodySingIn input[type="text"]{
+    padding: 40px;
+    font-size: 20px;
+}
+.bodySingIn input[type="password"]{
+    padding: 40px;
+    font-size: 20px;
+}

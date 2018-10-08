@@ -1,11 +1,11 @@
 import React, {Component } from 'react';
 import { Redirect } from 'react-router-dom'
-import { config } from '../credentials'
+import { db } from '../credentials'
 import 'firebase/database'
 import Post from './Post'
 import './Muro.css'
 import FormPost from './FormPost';
-import Autentification from './Autentification'
+// import { }
 
 
 
@@ -18,9 +18,7 @@ class Muro extends Component{
             ]
 
         };
-        // this.app = firebase.initializeApp(Credentials)
-        // this.d
-        this.db = config.database().ref().child('comments');//conexion a la base de datos.
+        this.db = db.ref().child('comments');//conexion a la base de datos.
     }
     componentDidMount(){ //se ejecuta despues de la vista, encargado de cargar los datos al estado
         const { posts } = this.state;
@@ -41,6 +39,7 @@ class Muro extends Component{
         })
 
     }
+    
     removePost=(postId)=>{
         this.db.child(postId).remove();
     }
@@ -48,7 +47,7 @@ class Muro extends Component{
         this.db.push().set({postContent: post})
     }
     render(){
-        if(this.state.user){ 
+        // if(this.state.user){ 
         return(
             <div className= "postContainer">
             <div className= "postHeader">
@@ -74,15 +73,16 @@ class Muro extends Component{
             </div>
             </div>
             
-        )} else{
-            return(
-                <Redirect to='./'/>
-            )
-        }
-    }
+        )} 
+        // else{
+        //     return(
+        //         <Redirect to='./'/>
+        //     )
+        // }
+    // }
 
 }
 export default Muro;
 
 
-//linea 31 se le estan pasando las propiedades solicitadas desde Post.
+// //linea 31 se le estan pasando las propiedades solicitadas desde Post.

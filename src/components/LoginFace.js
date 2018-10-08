@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'
-import { config } from '../credentials'
+import { auth } from '../credentials';
+import { Redirect, whitRouter } from 'react-router-dom'
 import './Login.css';
 
 class LoginFacebook extends Component {
@@ -11,24 +12,25 @@ class LoginFacebook extends Component {
         }
     }
     componentWillMount(){
-        config.auth().onAuthStateChanged(user =>{
+        auth.onAuthStateChanged(user =>{
             this.setState({
                 user})
         })
     }
 handleFacebooklogin =(user)=>{
     const provider = new firebase.auth.FacebookAuthProvider();
-    config.auth().signInWithPopup(provider)
+    auth.signInWithPopup(provider)
     .then(result => console.log(`${result.user.email} Ya se encuentra iniciada la sesión`))
     .catch(error => console.log(error))
 
 }
 handleFacebooklogout=()=>{
-    config.auth().signOut()
+    auth.signOut()
     .then(result => console.log(`${result.user} su sesion ha finalizado`))
     .catch(error => console.log(error))
 
 }
+
 
 
 autentification =(user)=>{

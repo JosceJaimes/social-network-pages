@@ -1,0 +1,10 @@
+.formSingup input[type="text"]{
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.formSingup input[type="password"]{
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}

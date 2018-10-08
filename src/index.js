@@ -1,18 +1,11 @@
-//Dependencias
 import React from 'react';
-import { render } from 'react-dom';
-//Assets
+import ReactDOM from 'react-dom';
 import './index.css';
-import AppRoutes from './Routers';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-render(
-    <AppRoutes />,
-    document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
-
-
 
 
 

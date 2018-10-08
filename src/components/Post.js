@@ -25,4 +25,4 @@ class Post extends Component{
 export default Post;
 
 
-// linea 14 estamos accediendo a las propiedades llamada en constructor y super
+// // linea 14 estamos accediendo a las propiedades llamada en constructor y super
